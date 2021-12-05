@@ -21,6 +21,10 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
-springBoot {
-    mainClassName = 'com.techieq.gradleEmp.GradleEmpApplication'
-}
+jar {  
+    manifest {  
+        attributes(  
+                   'Main-Class': 'com.techieq.gradleEmp.GradleEmpApplication' 
+        )  
+    }  
+}  
