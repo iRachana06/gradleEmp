@@ -32,10 +32,7 @@ public class EmployeeController
     }
 
     @PostMapping(path= "/create", consumes = "application/json", produces = "application/json")
-    public String addEmployee(
-            @RequestHeader(name = "X-COM-PERSIST", required = true) String headerPersist,
-            @RequestHeader(name = "X-COM-LOCATION", required = false, defaultValue = "ASIA") String headerLocation,
-            @RequestBody Employee employee)
+    public String addEmployee(@RequestBody Employee employee)
             throws Exception
     {
         //Generate resource id
